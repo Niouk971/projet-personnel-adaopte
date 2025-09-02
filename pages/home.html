@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     
     <meta charset="UTF-8">
@@ -7,55 +8,69 @@
     
     <title>Adaopte</title>
     
-    <script src="script.js"></script>
+    <script src="../script.js" defer></script>
     
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
 
 
 </head>
+
 <body>
 
-    <nav>
+    <div class="header">
 
-        <img src="../icons/favicon-32x32.png" alt="Animal prints" width="32" height="32">
+        <nav aria-label="Navigation principale">
 
-        <a>Adaopte</a>
+            <img src="../icons/favicon-32x32.png" alt="Animal prints" width="32" height="32">
+            <a href="home.html" class="logo">Adaopte</a>
 
-        <ul>
-            <li><a href="home.html">Accueil</a></li>
-            <li><a href="research.html">J'adopte</a></li>
-            <li>Guide de l'adoption</li>
-            <li><a href="form.html">Devenir bénévole</a></li>
-        </ul>
+            <ul>
+                <li><a href="home.html">Accueil</a></li>
+                <li><a href="search.html">J'adopte</a></li>
+                <li>Guide de l'adoption</li>
+                <li><a href="form.html">Devenir bénévole</a></li>
+            </ul>
 
-        <button>Faire un don</button>
+            <button>Faire un don</button>
 
-    </nav>
+        </nav>
+
+    </div>
 
     <section id="landing-page">
+
         <h1>Donnons-leur autant qu'ils nous apportent</h1>
         <p>Chaque jour, des milliers d'animaux attendent une famille aimante. Trouvez votre<br><br>
            compagnon idéal parmi nos animaux disponibles à l'adoption.</p>
+
     </section>
 
-    <form id="research-container">
+    <form id="search-container">
         
-        <label for="choice">Choisis une option</label>
+        <label for="choice">Type d'animal</label>
         <select id="choice" name="choice">
-            <option value="">-- Sélectionne --</option>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
+            <option value="default">Chien</option>
+            <option value="option1">Chat</option>
+            <option value="option2">Lapin</option>
+            <option value="option3">Hamster</option>
         </select>
 
-
         <label for="location">Localisation</label>
-        <input type="texte" placeholder="Votre ville">
+        <input type="text" id="city-text" placeholder="Votre ville">
     
-        <button>Rechercher</button>
+        <button id="search-button">Rechercher</button>
     
     </form>
 
+    <section id="main-content">
+
+        <h1>Nos animaux à adopter</h1>
+        <p>Découvrez en images tous nos animaux qui attendent une famille aimante. Chaque photo raconte<br><br>
+           une histoire et un espoir.</p>
+           
+    </section>
+
 </body>
+
 </html>
