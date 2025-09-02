@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'AmaticSC';
+    src: url('../fonts/AmaticSC-Bold.ttf') format('tff'),
+         url('../fonts/AmaticSC-Bold.ttf') format('tff');
+}
+
+body {
+    font-family: 'AmaticSC', sans-serif;
+}
