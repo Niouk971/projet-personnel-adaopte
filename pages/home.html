@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
 
-
 </head>
+
 
 <body>
 
@@ -38,39 +38,207 @@
 
     </div>
 
-    <section id="landing-page">
+    <header>
 
-        <h1>Donnons-leur autant qu'ils nous apportent</h1>
-        <p>Chaque jour, des milliers d'animaux attendent une famille aimante. Trouvez votre<br><br>
-           compagnon idéal parmi nos animaux disponibles à l'adoption.</p>
+        <section id="landing-page">
 
-    </section>
+            <img src="../images/background.jpg" alt="Background dog" width="300" height="200">
+            <h1>Donnons-leur autant qu'ils nous apportent</h1>
+            <p>Chaque jour, des milliers d'animaux attendent une famille aimante. Trouvez votre<br><br>
+            compagnon idéal parmi nos animaux disponibles à l'adoption.</p>
+            
+            <form id="search-container">
+                
+                <label for="choice">Type d'animal</label>
+                <select id="choice" name="choice">
+                    <option value="default">Chien</option>
+                    <option value="option1">Chat</option>
+                    <option value="option2">Lapin</option>
+                    <option value="option3">Hamster</option>
+                </select>
 
-    <form id="search-container">
-        
-        <label for="choice">Type d'animal</label>
-        <select id="choice" name="choice">
-            <option value="default">Chien</option>
-            <option value="option1">Chat</option>
-            <option value="option2">Lapin</option>
-            <option value="option3">Hamster</option>
-        </select>
+                <label for="location">Localisation</label>
+                <input type="text" id="city-text" placeholder="Votre ville">
+            
+                <button id="search-button">Rechercher</button>
+            
+            </form>
 
-        <label for="location">Localisation</label>
-        <input type="text" id="city-text" placeholder="Votre ville">
-    
-        <button id="search-button">Rechercher</button>
-    
-    </form>
+        </section>
+
+    </header>
+
 
     <section id="main-content">
 
         <h1>Nos animaux à adopter</h1>
         <p>Découvrez en images tous nos animaux qui attendent une famille aimante. Chaque photo raconte<br><br>
            une histoire et un espoir.</p>
-           
+        
+        <main>
+
+            <div class="container">
+                
+                <div class="item item-1">
+                    <img src="../images/charlesdeluvio-K4mSJ7kc0As-unsplash.jpg" alt="" width="200" height="300">
+                </div>
+
+                <div class="item item-2">
+                    <img src="../images/manja-vitolic-gKXKBY-C-Dk-unsplash.jpg" alt="" width="200" height="300">
+                </div>
+
+                <div class="item item-3">
+                    <img src="../images/chan-swan-NKyl19P5IHg-unsplash.jpg" alt="" width="200" height="300">
+                </div>
+
+                <div class="item item-4">
+                    <img src="../images/alan-king-KZv7w34tluA-unsplash.jpg" alt="" width="200" height="300">
+                </div>
+
+                <div class="item item-5">
+                    <img src="../images/jae-park-7GX5aICb5i4-unsplash.jpg" alt="" width="200" height="300">
+                </div>
+
+                <div class="item item-6">
+                    <img src="../images/yosei-g-OVgE3m4MHKM-unsplash.jpg" alt="" width="200" height="300">
+                </div>
+
+                <div class="item item-7">
+                    <img src="../images/melanie-kreutz-IFnknR2Mv5o-unsplash.jpg" alt="" width="200" height="300">
+                </div>
+
+                <div class="item item-8">
+                    <img src="../images/peri-stojnic-5Vr_RVPfbMI-unsplash.jpg" alt="" width="200" height="300">
+                </div>
+
+            </div>
+
+            <button>Voir tous les animaux</button>
+
+        </main>
+        
     </section>
 
+    <section id="tutorial">
+
+           <h1>Contact</h1>
+
+            <!-- <div class="steps">
+
+                <div class="step-1">
+
+                </div>
+
+                <div class="step-2">
+
+                </div>
+
+                <div class="step-3">
+
+                </div>
+
+                <div class="step-4">
+
+                </div>
+
+            </div> -->
+
+            <ol>
+
+                <li>Trouvez votre compagnon</li>
+                <p>Parcourez notre base de<br>
+                   données d'animaux disponibles<br>
+                   et utilisez nos filtres pour trouver<br>
+                   celui qui correspond à votre<br>
+                   mode de vie.</p>
+
+                <li>Trouvez votre compagnon</li>
+                <p>Soumettez votre formulaire<br>
+                   d'adoption pour l'animal qui vous<br>
+                   intéresse. Nous examinons<br>
+                   chaque demande avec soin.</p>
+
+                <li>Rencontrez l'animal</li>
+                <p>Visitez le refuge pour rencontrer<br>
+                   l'animal et voir si vous êtes<br>
+                   compatibles. C'est une étape<br>
+                   essentielle du processus.</p>
+
+                <li>Bienvenue à la maison</li>
+                <p>Une fois votre demande<br>
+                   approuvée, vous pouvez<br>
+                   accueillir votre nouvel ami chez<br>
+                   vous. Nous restons disponibles<br>
+                   pour vous conseiller.</p>
+
+            </ol>
+
+    </section>
+
+
+    <section id="call-to-action">
+
+        <h1>Prêt⸱e à changer une vie ?</h1>
+
+        <p>Adoptez, partagez, soutenez... Chaque geste compte. Que vous ouvriez votre foyer ou votre coeur,<br><br>
+           vous pouvez offrir une seconde chance à un animal abandonné.</p>
+        
+        <div>
+
+            <button>Adopter un animal</button>
+            <button>Faire un don 🫶</button>
+            <button>Devenir bénévole</button>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <div>
+            
+            <h1>Adaopte</h1>
+            <p>Notre mission est de trouver des foyers aimants pour<br><br>
+               chaque animal abandonné et de promouvoir le bien-être<br><br>
+               animal.</p>
+        
+        </div>
+
+        <div>
+        
+            <h1>Informations utiles</h1>
+
+             <ul>
+                <li>FAQs</li>
+                <li>Conseils d'adoption</li>
+                <li>Nous contacter</li>
+                <li>Mentions légales</li>
+            </ul>
+
+        </div>
+        
+        <div>
+
+            <h1>Contact</h1>
+
+             <ul>
+                <li>116 Rue du Faubourg Saint-Martin</li>
+                <li>75010 Paris, France</li>
+                <li>Email: contact@adaopte.fr</li>
+                <li>Tél: +33 1 23 45 67 89</li>
+            </ul>
+
+        </div>
+
+    <hr>
+
+    <p>© 2025 Adaopte. Tous droits réservés.<br><br>
+       Ce site a été développé dans le cadre d'un projet pour ADA Tech School.</p>
+
+    </footer>
+
 </body>
+
 
 </html>
