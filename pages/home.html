@@ -20,22 +20,33 @@
 
     <div class="header">
 
-        <nav class="nav-bar" aria-label="Navigation principale"> <!-- aria-label pour l'accessibilité -->
+        <nav class="nav-bar" aria-label="Navigation principale">
 
+            <!-- LOGO -->
             <div class="nav-logo">
-                <!-- <img src="../icons/favicon-32x32.png" alt="Animal prints" width="32" height="32"> -->
-                <a href="home.html" class="logo"><span class="emoji">🐾</span>Ada<span>opte</span></a>
+                <a href="home.html" class="logo">
+                    <span class="emoji">🐾</span>Ada<span class="highlight">opte</span>
+                </a>
             </div>
 
+            <!-- MENU BURGER -->
+            <div class="menu-toggle" onclick="document.querySelector('.nav-menu ul').classList.toggle('active')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- MENU PRINCIPAL -->
             <div class="nav-menu">
                 <ul>
                     <li><a href="home.html"><i data-lucide="home"></i>Accueil</a></li>
                     <li><a href="search.html"><i data-lucide="bone"></i>J'adopte</a></li>
-                    <li><i data-lucide="fish"></i>Guide de l'adoption</li>
+                    <li><a><i data-lucide="fish"></i>Guide de l'adoption</a></li>
                     <li><a href="form.html"><i data-lucide="squirrel"></i>Devenir bénévole</a></li>
                 </ul>
             </div>
 
+            <!-- BOUTON D'ACTION -->
             <div class="nav-action">
                 <button>Faire un don</button>
             </div>
@@ -44,57 +55,39 @@
 
     </div>
 
+
     <header>
-
         <section id="landing-page">
-
             <div class="overlay-content">
-
-                <!-- <img src="../images/background.jpg" alt="Background dog" width="300" height="200"> -->
-
                 <h1>Donnons-leur autant qu'ils nous apportent</h1>
-                <p>Chaque jour, des milliers d'animaux attendent une famille aimante. Trouvez votre
-                    compagnon idéal parmi nos animaux disponibles à l'adoption.</p>
-
-
+                <p>Chaque jour, des milliers d'animaux attendent une famille aimante. Trouvez votre compagnon idéal
+                    parmi nos animaux disponibles à l'adoption.</p>
             </div>
-
         </section>
-
-
-        <form id="search-container">
-
-            <div class="form-group">
-
-                <label for="choice">Type d'animal</label>
-                <select id="choice" name="choice">
-                    <option value="default">Chien</option>
-                    <option value="option1">Chat</option>
-                    <option value="option2">Lapin</option>
-                    <option value="option3">Hamster</option>
-                </select>
-
-            </div>
-
-            <div class="form-group">
-
-                <label for="location">Localisation</label>
-                <input type="text" id="city-text" placeholder="Votre ville">
-
-            </div>
-
-            <div class="form-group button-group">
-
-                <button id="search-button">Rechercher</button>
-
-            </div>
-
-        </form>
-
-
     </header>
 
+    <form id="search-container">
+        <div class="form-group">
+            <label for="choice">Type d'animal</label>
+            <select id="choice" name="choice">
+                <option value="default">Chien</option>
+                <option value="option1">Chat</option>
+                <option value="option2">Lapin</option>
+                <option value="option3">Hamster</option>
+            </select>
+        </div>
 
+        <div class="form-group">
+            <label for="location">Localisation</label>
+            <input type="text" id="city-text" placeholder="Votre ville">
+        </div>
+
+        <div class="form-group button-group">
+            <button id="search-button">Rechercher</button>
+        </div>
+    </form>
+
+    
     <section id="main-content">
         <h1>Nos animaux à adopter</h1>
         <p>
@@ -179,7 +172,7 @@
 
         <h1>Prêt⸱e à changer une vie ?</h1>
 
-        <p>Adoptez, partagez, soutenez... Chaque geste compte. Que vous ouvriez votre foyer ou votre coeur,<br><br>
+        <p>Adoptez, partagez, soutenez... Chaque geste compte. Que vous ouvriez votre foyer ou votre coeur,
             vous pouvez offrir une seconde chance à un animal abandonné.</p>
 
         <div>
