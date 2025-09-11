@@ -1,40 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Adaopte : J'adopte (Recherche)</title>
-    
-    <script src="../script.js" defer></script>
-    
-    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Adaopte</title>
+
+    <script src="../search.js" defer></script>
+
+    <link rel="stylesheet" href="../css/search.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
 
 </head>
+
+
 <body>
 
-    <nav>
-        <ul>
-            <li><a href="home.html">Accueil</a></li>
-            <li><a href="search.html">J'adopte</a></li>
-            <li>Guide de l'adoption</li>
-            <li><a href="form.html">Devenir bénévole</a></li>
-        </ul>
-    </nav>
+    <div class="header">
 
-    <section id="search">
-        
-        <form class="email-container">
-            <input type="email" placeholder="Email Address" required>
-            <button type="submit">➔</button>
+        <nav class="nav-bar" aria-label="Navigation principale">
+
+            <!-- LOGO -->
+            <div class="nav-logo">
+                <a href="home.html" class="logo">
+                    <span class="emoji">🐾</span>Ada<span class="highlight">opte</span>
+                </a>
+            </div>
+
+            <!-- MENU BURGER -->
+            <div class="menu-toggle" onclick="document.querySelector('.nav-menu ul').classList.toggle('active')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- MENU PRINCIPAL -->
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="home.html"><i data-lucide="home"></i>Accueil</a></li>
+                    <li><a href="search.html"><i data-lucide="bone"></i>J'adopte</a></li>
+                    <li><a><i data-lucide="fish"></i>Guide de l'adoption</a></li>
+                    <li><a href="form.html"><i data-lucide="squirrel"></i>Devenir bénévole</a></li>
+                </ul>
+            </div>
+
+            <!-- BOUTON D'ACTION -->
+            <div class="nav-action">
+                <button>Faire un don</button>
+            </div>
+
+        </nav>
+
+    </div>
+
+
+    <section id="search-section">
+        <form id="search-form">
+            <div class="form-group">
+                <label for="type">Type d'animal</label>
+                <select id="type" name="type">
+                    <option value="">Tous</option>
+                    <option value="chien">Chien</option>
+                    <option value="chat">Chat</option>
+                    <option value="lapin">Lapin</option>
+                    <option value="rongeur">Rongeur</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="region">Région</label>
+                <input type="text" id="region" name="region" placeholder="Votre ville ou département">
+            </div>
+
+            <div class="form-group button-group">
+                <button type="submit" id="search-button">Rechercher 🔍</button>
+            </div>
         </form>
-
-        <h1>Type d'animal</h1>
-        <p>Contenu de la section accueil...</p>
-    
     </section>
 
+    <section id="results">
+        <h2>Résultats</h2>
+        <p>Aucun animal trouvé pour le moment.</p>
+    </section>
+
+
+    <section id="animal-grid">
+
+        <div class="animal-card">
+            <img src="../images/charlesdeluvio-K4mSJ7kc0As-unsplash.jpg" alt="Charlie">
+            <div class="animal-info">
+                <h3>Charlie</h3>
+                <p><strong>Âge :</strong> 5 ans</p>
+                <p><strong>Race :</strong> Pug</p>
+                <p><strong>Type :</strong> Chien</p>
+                <p><strong>Ville :</strong> Lille (59000)</p>
+                <p class="description">Charlie est un petit chien calme et affectueux qui adore les balades tranquilles
+                    et les caresses sur le canapé.</p>
+                <button>Programmer un moment</button>
+            </div>
+        </div>
+
+        <div class="animal-card">
+            <img src="../images/manja-vitolic-gKXKBY-C-Dk-unsplash.jpg" alt="Mia">
+            <div class="animal-info">
+                <h3>Mia</h3>
+                <p><strong>Âge :</strong> 2 ans</p>
+                <p><strong>Race :</strong> Chat noir et blanc</p>
+                <p><strong>Type :</strong> Chat</p>
+                <p><strong>Ville :</strong> Strasbourg (67000)</p>
+                <p class="description">Mia est une boule de tendresse curieuse et joueuse, toujours prête à ronronner
+                    près de vous.</p>
+                <button>Programmer un moment</button>
+            </div>
+        </div>
+
+        <div class="animal-card">
+            <img src="../images/chan-swan-NKyl19P5IHg-unsplash.jpg" alt="Coco">
+            <div class="animal-info">
+                <h3>Coco</h3>
+                <p><strong>Âge :</strong> 1 an</p>
+                <p><strong>Race :</strong> Lapin</p>
+                <p><strong>Type :</strong> Lapin</p>
+                <p><strong>Ville :</strong> Annecy (74000)</p>
+                <p class="description">Coco est un petit lapin plein d’énergie, très doux et parfait pour un foyer
+                    aimant et paisible.</p>
+                <button>Programmer un moment</button>
+            </div>
+        </div>
+
+        <div class="animal-card">
+            <img src="../images/alan-king-KZv7w34tluA-unsplash.jpg" alt="Rex">
+            <div class="animal-info">
+                <h3>Rex</h3>
+                <p><strong>Âge :</strong> 4 ans</p>
+                <p><strong>Race :</strong> Chow-chow</p>
+                <p><strong>Type :</strong> Chien</p>
+                <p><strong>Ville :</strong> Grenoble (38000)</p>
+                <p class="description">Rex est un chien loyal et majestueux, idéal pour une personne douce et patiente
+                    qui aime les câlins silencieux.</p>
+                <button>Programmer un moment</button>
+            </div>
+        </div>
+
+        <div class="animal-card">
+            <img src="../images/jae-park-7GX5aICb5i4-unsplash.jpg" alt="Luna">
+            <div class="animal-info">
+                <h3>Luna</h3>
+                <p><strong>Âge :</strong> 3 ans</p>
+                <p><strong>Race :</strong> Chat Roux</p>
+                <p><strong>Type :</strong> Chat</p>
+                <p><strong>Ville :</strong> Bordeaux (33000)</p>
+                <p class="description">Luna adore les coins ensoleillés et les siestes à vos côtés. Elle vous offrira
+                    tout l'amour d'un regard félin.</p>
+                <button>Programmer un moment</button>
+            </div>
+        </div>
+
+        <div class="animal-card">
+            <img src="../images/yosei-g-OVgE3m4MHKM-unsplash.jpg" alt="Biscuit">
+            <div class="animal-info">
+                <h3>Biscuit</h3>
+                <p><strong>Âge :</strong> 3 mois</p>
+                <p><strong>Race :</strong> Cochon d'Inde</p>
+                <p><strong>Type :</strong> Rongeur</p>
+                <p><strong>Ville :</strong> Tours (37000)</p>
+                <p class="description">Biscuit est tout petit mais plein de vie ! Il aime les légumes croquants et les
+                    instants de douceur en famille.</p>
+                <button>Programmer un moment</button>
+            </div>
+        </div>
+
+        <div class="animal-card">
+            <img src="../images/melanie-kreutz-IFnknR2Mv5o-unsplash.jpg" alt="Rio">
+            <div class="animal-info">
+                <h3>Rio</h3>
+                <p><strong>Âge :</strong> 5 mois</p>
+                <p><strong>Race :</strong> Lapin nain brun</p>
+                <p><strong>Type :</strong> Lapin</p>
+                <p><strong>Ville :</strong> Poitiers (86000)</p>
+                <p class="description">Rio est discret, mignon comme tout, et adore explorer les petits coins de la
+                    maison avec délicatesse.</p>
+                <button>Programmer un moment</button>
+            </div>
+        </div>
+
+        <div class="animal-card">
+            <img src="../images/peri-stojnic-5Vr_RVPfbMI-unsplash.jpg" alt="Ruby">
+            <div class="animal-info">
+                <h3>Ruby</h3>
+                <p><strong>Âge :</strong> 2 ans</p>
+                <p><strong>Race :</strong> Chien Samoyed</p>
+                <p><strong>Type :</strong> Chien</p>
+                <p><strong>Ville :</strong> Chamonix (74400)</p>
+                <p class="description">Ruby est une boule de neige pleine d'amour ! Elle adore les promenades et les
+                    câlins par temps frais.</p>
+                <button>Programmer un moment</button>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <footer class="footer">
+        <div class="footer-column">
+            <h2>Adaopte</h2>
+            <p>
+                Notre mission est de trouver des foyers aimants pour chaque animal abandonné
+                et de promouvoir le bien-être animal.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h2>Informations utiles</h2>
+            <ul>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Conseils d'adoption</a></li>
+                <li><a href="#">Nous contacter</a></li>
+                <li><a href="#">Mentions légales</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h2>Contact</h2>
+            <ul>
+                <li>116 Rue du Faubourg Saint-Martin</li>
+                <li>75010 Paris, France</li>
+                <li>Email : contact@adaopte.fr</li>
+                <li>Tél : +33 1 23 45 67 89</li>
+            </ul>
+        </div>
+
+
+        <div class="footer-bottom">
+            <p>© 2025 Adaopte. Tous droits réservés.</p>
+            <p>Ce site a été développé dans le cadre d'un projet pour ADA Tech School.</p>
+        </div>
+    </footer>
+
+
+    <!-- Production version -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script>
+        const header = document.querySelector('.header');
+        document.body.style.paddingTop = header.offsetHeight + 'px';
+    </script>
+
 </body>
+
+
 </html>
