@@ -27,7 +27,7 @@ document.querySelector('#search-form').addEventListener('submit', async (e) => {
 // Fonction pour charger tous les animaux (sans filtre)
 async function loadAnimals() {
     try {
-        const response = await fetch('../data/animals.json'); // ajuste le chemin si besoin
+        const response = await fetch('../data/animals.json');
         const data = await response.json();
         displayAnimals(data);
     } catch (error) {
